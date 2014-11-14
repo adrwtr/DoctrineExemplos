@@ -1,0 +1,36 @@
+<!-- config/xml/Carro.dcm.xml -->
+<doctrine-mapping 
+      xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                    http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+      <entity 
+         name="Bairro" 
+         table="bairros">
+          
+          <id name="cd_bairro" type="integer">
+              <generator strategy="AUTO" />
+          </id>
+
+
+          <field name="ds_uf" type="string" />
+          <field name="ds_bairro" type="string" />
+                                     
+
+         <indexes>
+            <index name="idx_ds_uf" columns="ds_uf"/>            
+         </indexes>
+          
+      
+      
+        <many-to-one field="objMunicipio" target-entity="Municipio" inversed-by="arrBairros">
+            <join-column name="cd_municipio" referenced-column-name="cd_municipio" />
+        </many-to-one>
+    
+
+
+    
+      </entity>
+      
+</doctrine-mapping>

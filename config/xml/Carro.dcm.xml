@@ -1,0 +1,37 @@
+<!-- config/xml/Carro.dcm.xml -->
+<doctrine-mapping 
+      xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                    http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+      <entity 
+         name="Carro" 
+         table="carros">
+          
+          <id name="cd_carro" type="integer">
+              <generator strategy="AUTO" />
+          </id>
+
+          <field name="nm_carro" type="string" />
+          <field name="nm_marca" type="string" />
+
+           
+      
+           <many-to-many field="arrPessoas" mapped-by="arrCarros" target-entity="Pessoa" >         
+            <join-table name="pessoas_carros">
+                <join-columns>
+                    <join-column name="cd_carro" referenced-column-name="cd_carro" />
+                </join-columns>
+                <inverse-join-columns>
+                    <join-column name="cd_pessoa" referenced-column-name="cd_pessoa" />
+                </inverse-join-columns>
+            </join-table>
+          </many-to-many>
+
+                            
+          
+    
+      </entity>
+      
+</doctrine-mapping>
