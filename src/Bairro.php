@@ -7,9 +7,9 @@ class Bairro
    protected $ds_uf;
    protected $ds_bairro;
    protected $objMunicipio;
-   protected $cd_municipio;
+   protected $cd_municipio2;
 
-	// coment·rio 2
+	// coment√°rio 2
 
     /**
      * Gets the value of cd_bairro.
