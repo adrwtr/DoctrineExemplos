@@ -2,6 +2,8 @@
 use Doctrine\Common\Collections\ArrayCollection;
 
 // outro programador editou isto
+// estou editando
+// teste
 
 class Bairro
 {    
