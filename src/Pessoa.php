@@ -31,6 +31,7 @@ class Pessoa
     public function setNmPessoa( $name )
     {
         $this->nm_pessoa = $name;
+        return $this;
     }
 
 
