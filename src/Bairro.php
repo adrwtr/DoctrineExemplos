@@ -9,8 +9,6 @@ class Bairro
    protected $objMunicipio;
    protected $cd_municipio2;
 
-	// comentário 2
-
     /**
      * Gets the value of cd_bairro.
      *
