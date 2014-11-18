@@ -1,7 +1,7 @@
 <?php
 use Doctrine\Common\Collections\ArrayCollection;
 
-// src/Product.php
+// src/Pessoa
 class Pessoa
 {    
     protected $cd_pessoa;    
@@ -13,11 +13,14 @@ class Pessoa
     {
       $this->arrPessoasContatos = new ArrayCollection();  
       $this->arrCarros = new ArrayCollection();  
+
+
     }    
 
     public function getCdPessoa()
     {
         return $this->cd_pessoa;
+        // teste
     }
 
     public function getNmPessoa()
