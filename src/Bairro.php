@@ -1,6 +1,8 @@
 <?php
 use Doctrine\Common\Collections\ArrayCollection;
 
+// outro programador editou isto
+
 class Bairro
 {    
    protected $cd_bairro;
@@ -9,7 +11,7 @@ class Bairro
    protected $objMunicipio;
    protected $cd_municipio;
 
-	// comentário 2
+	// comentÃ¡rio 2
 
     /**
      * Gets the value of cd_bairro.
